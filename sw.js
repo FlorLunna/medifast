@@ -71,7 +71,7 @@ self.addEventListener('fetch', evento => {
             if (res) {
                 return res;
             }
-            console.log('No existe', evento.request.url);
+            //console.log('No existe', evento.request.url);
 
             return fetch(evento.request)
                 .then(resWeb => {
