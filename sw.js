@@ -102,7 +102,7 @@ self.addEventListener('fetch', evento => {
 });
 
     
-        evento.respondWith(respuesta);
+  
         function limpiarCache(nombreCache, numeroItems){
             //abrimos el cache
             caches.open(nombreCache)
