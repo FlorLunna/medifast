@@ -49,7 +49,7 @@ self.addEventListener('install', evento=>{
     ]);
     });
     const cacheInmutable =  caches.open(CACHE_INMUTABLE)
-        .then(cache => cache.addA(
+        .then(cache => cache.add(
             'https://use.fontawesome.com/releases/v5.15.3/js/all.js',
             //'https://fonts.googleapis.com/css?family=Montserrat:400,700',
             //'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700',
