@@ -1,4 +1,4 @@
-import tiendabd, {guardar, crearEtiqueta, consultar} from "/funciones.js";
+import tiendabd, {guardar, crearEtiqueta, consultar} from "funciones.js";
 //Indicamos el nombre de la base de datos "Tienda", la tabla "productos"
 //y sus atributos ++id(autoincremental), nombre, precio y descripción.
 let bd = tiendabd("Tienda", { productos: `++id,nombre, precio,descripcion `});

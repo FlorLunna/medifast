@@ -11,10 +11,7 @@ self.addEventListener('install', evento=>{
         'index.html',
         'app.js',
         'manifest.json',
-        'Ofertas.html',
-        'Ofertas2.html',
         'Botiquin.html',
-        'Botiquin2.html',
         'assets/img/ima/1.jpeg',
         'assets/img/ima/2.jpeg',
         'assets/img/ima/3.jpeg',
@@ -89,12 +86,11 @@ self.addEventListener('fetch', evento => {
             return resWeb.clone();
             });
         });
-    }) //NAVEGACIÓN OFFLINE
-        .catch(err => {
+    }).catch(err => {
             
             if(evento.request.headers.get('accept').includes('text/html')){
           
-            return caches.match('/offline.html');
+            return caches.match('offline.html');
             }else if(evento.request.headers.get('accept').includes('png')){
                 
                 return caches.match('assets/img/error404.jpg');
