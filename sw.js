@@ -97,25 +97,30 @@ self.addEventListener('fetch', evento => {
                 return caches.match('assets/img/error404.jpg');
             }
         });
+    });
+        evento.respondWith(respuesta);
 
-    evento.respondWith(respuesta);
-});
 
     
   
-        function limpiarCache(nombreCache, numeroItems){
-            //abrimos el cache
-            caches.open(nombreCache)
-                .then(cache=>{
-                    return cache.keys()
-                        .then(keys=>{
-                            if (keys.length>numeroItems){
-                                cache.delete(keys[0])
-                                .then(limpiarCache(nombreCache, numeroItems));
-            }
-            });
-            });
-        }
+function limpiarCache(nombreCache, numeroItems) {
+    // Abrimos el cache
+    caches.open(nombreCache)
+        .then(cache => {
+            return cache.keys()
+                .then(keys => {
+                    if (keys.length > numeroItems) {
+                        // Eliminamos el primer elemento del cache
+                        cache.delete(keys[0])
+                            .then(() => {
+                                // Llamada recursiva después de eliminar un elemento
+                                limpiarCache(nombreCache, numeroItems);
+                            });
+                    }
+                });
+        });
+}
+
     
         
     
