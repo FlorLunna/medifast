@@ -85,7 +85,7 @@ self.addEventListener('fetch', evento => {
  
             return resWeb.clone();
             });
-        });
+        })
     }).catch(err => {
         //si ocurre un error, en nuestro caso no hay conexión
         if(evento.request.headers.get('accept').includes('text/html')){
