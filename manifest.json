@@ -1,0 +1,54 @@
+{
+
+    "short_name":"Med",
+    "name":"Medifast",
+    "start_url":"index.html",
+    "background_color":"#3498db",
+    "theme_color":"#3498db",
+    "display": "standalone",
+    "orientation":"portrait",
+    
+    "icons": [
+        {
+            "src": "iconos/72x72.jpg",
+            "type": "image/jpg",
+            "sizes": "72x72"
+        },
+        {
+            "src": "iconos/96x96.jpg",
+            "type": "image/jpg",
+            "sizes": "96x96"
+        },
+        {
+            "src": "iconos/128x128.jpg",
+            "type": "image/jpg",
+            "sizes": "128x128"
+        },
+        {
+            "src": "iconos/144x144.jpg",
+            "type": "image/jpg",
+            "sizes": "144x144"
+        },
+        {
+            "src": "iconos/152x152.jpg",
+            "type": "image/jpg",
+            "sizes": "152x152"
+        },
+        {
+            "src": "iconos/192x192.jpg",
+            "type": "image/jpg",
+            "sizes": "192x192"
+        },
+        {
+            "src": "iconos/384x384.jpg",
+            "type": "image/jpg",
+            "sizes": "384x384"
+        },
+        {
+            "src": "iconos/512x512.jpg",
+            "type": "image/jpg",
+            "sizes": "512x512"
+        }
+      ]
+    
+    }

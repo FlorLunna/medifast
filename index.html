@@ -16,31 +16,74 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link rel="manifest" href="manifest.json" />
     </head>
     <script src="app.js"></script>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                       <nav>
-                        <div class="cont">
-                          <label>Buscar</label>
-                          <input type="search" placeholder="en esta Web" title="Presione Esc para supender la búsqueda">
-                        </div>
-                       </nav>
-                        <li class="nav-item"><a class="nav-link" href="Ofertas.html"><i class="fa fa-tags"></i>
-                            Ofertas</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Botiquin.html"> <i class="fa fa-medkit"></i>
-                            Botiquín</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.php"><i class="fa fa-user-circle"></i>
-                            INICIAR SECIÓN</a></li>
-                        <li class="nav-item"><a class="nav-link" href="registrar.php"><i class="fa fa-user-plus"></i>
-                            REGISTRATE</a></li>
-                    </ul>
+         <!--Navigation-->
+         <!--<nav class="navbar bg-body-tertiary fixed-top" >
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Offcanvas navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                          <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
             </div>
+          </nav>-->
+
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"> </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav"><i class="fa fa-align-right" aria-hidden="true"></i>
+                    <ul class="navbar-nav text-uppercase ms-left py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="Botiquin.html"><i class="fa fa-medkit"></i>
+                            Botiquín</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html"> <i class="fa fa-home"></i>
+                            Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="registrar.html"><i class="fa fa-user-plus"></i>
+                            REGISTRARSE</a></li>
+                            <li class="nav-item"><a class="nav-link" href="perfil.html"><i class="fa fa-user-plus"></i>
+                                Perfil</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
         </nav>
         <!-- Masthead-->
         <header class="masthead">
@@ -50,7 +93,7 @@
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Aquí Encontraras</h2><br><br>
+                    <h2 class="section-heading text-uppercase">Aquí Encontrarás</h2><br><br>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -650,7 +693,7 @@
                                             Tabletas
                                         </li>
                                     </ul>
-                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -686,7 +729,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
 
                                         </li>
                                     </ul>
-                                   <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                   <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -720,7 +763,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Tabletas 
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -756,7 +799,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Capsulas
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -790,7 +833,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Jarabe
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -825,7 +868,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
 
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -860,7 +903,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                              Tabletas
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -896,7 +939,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
 
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -931,7 +974,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Jarabe
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -966,7 +1009,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Tabletas
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1001,7 +1044,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
 
                                         </li>
                                     </ul>
-                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1036,7 +1079,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Tabletas
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1072,7 +1115,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Tabletas $57.750
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1107,7 +1150,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                         </li>
                          
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1141,7 +1184,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Tabletas
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1176,7 +1219,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                              Tabletas.$782.04
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1210,7 +1253,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Inyectable.
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1244,7 +1287,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Solucion. 
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1278,7 +1321,7 @@ el sinalgen es una combinacion de acetaminofen analgesico muy conocido y seguro 
                                             Pastillas $1,059.00
                                         </li>
                                     </ul>
-                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1313,7 +1356,7 @@ Crema vaginal genérica de estradiol estrace - .01%</h2>
                                             Crema
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1349,7 +1392,7 @@ Paratoides
 Paratoides
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1381,7 +1424,7 @@ Paratoides
                                             <strong>Categoria:</strong>Inyectable
                                         </li>
                                     </ul>
-                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1417,7 +1460,7 @@ Paratoides
 
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1453,7 +1496,7 @@ Paratoides
                                             Medicamentos
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1488,7 +1531,7 @@ Paratoides
                                             Vitamina 
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1522,7 +1565,7 @@ Paratoides
                                              Vitamina
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1556,7 +1599,7 @@ Paratoides
                                             Vitamina 
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                    
@@ -1590,7 +1633,7 @@ Paratoides
                                             <strong>Categoria:</strong>
                                         Vitamina.
                                         </li>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1625,7 +1668,7 @@ Paratoides
                                              Vitamina K
                                         </li>
                                     </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1659,7 +1702,7 @@ Paratoides
                                             Vitamina
                                         </li>
                                     </ul>
-                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1692,7 +1735,7 @@ Paratoides
                                             <strong>Categoria:</strong>
                                             Vitaminas
                                         </li>
-                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1728,7 +1771,7 @@ Hoy en día el ritmo de vida, el estrés diario, etc. requiere una dieta equilib
                                             Vitamina
                                         </li>
                                     </ul>
-                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                               <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1762,7 +1805,7 @@ Hoy en día el ritmo de vida, el estrés diario, etc. requiere una dieta equilib
                                             VItaminas
                                         </li>
                                     </ul>
-                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="login.php"></a><i class="fas fa-user-circle"></i>
+                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button"><a class="nav-link" href="registrar.html"></a><i class="fas fa-user-circle"></i>
                                         Debes iniciar sesion antes de continuar.
                                     </button>
                                 </div>
@@ -1773,76 +1816,7 @@ Hoy en día el ritmo de vida, el estrés diario, etc. requiere una dieta equilib
             </div>
         </div>
         <!----------------------------------------------------------------------------------------->  
-       <section class="page-section bg-light" id="team">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Puedes contactarnos</h2>
-                    <h3 class="section-subheading text-muted">Este proyecto fue elaborado por.....</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/1.jpeg" alt="..." />
-                            <h4>Javier Hernández</h4>
-                            <p class="text-muted">Lider del proyecto</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/luiscya.hernandez"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/ljhr_666/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/2.jpeg" alt="..." />
-                            <h4>Jennifer Mercado</h4>
-                            <p class="text-muted">Secretaria</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/jennifer21.hernandez"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/jenny_21her/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/3.jpeg" alt="..." />
-                            <h4>Gustavo Solchaga </h4>
-                            <p class="text-muted">Tester</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/gustavo.solchagavarela"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/gustavosolchaga96/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Clients-->
-<section class="page-section bg-light" id="team">
-      <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/4.jpeg" alt="..." />
-                            <h4>Pablo Suarez</h4>
-                            <p class="text-muted">Apollo I</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/profile.php?id=100008237944069"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/pablo.suarez.c/"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/5.jpeg" alt="..." />
-                            <h4>Tania Miralrio</h4>
-                            <p class="text-muted">Apollo II</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/taniamonserrat.miralrio.12"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/6.jpeg" alt="..." />
-                            <h4>Medifast</h4>
-                            <p class="text-muted">Pagina Oficial de facebook</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/M-e-d-i-f-a-s-t-109259818136250"><i class="fab fa-facebook-f"></i></a>
-                           
-                        </div>
-                    </div>
-                  </div>
-            </div>
-        </section>
+       
           
         <!-- Scroll to Top Button-->
         <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
@@ -1855,5 +1829,12 @@ Hoy en día el ritmo de vida, el estrés diario, etc. requiere una dieta equilib
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="main.js" type="module"></script>
+
+  <!-- API DEXIE PARA EL MANEJO DE LA BASE DE DATOS-->
+  <script src="java/dexie.min.js"
+    integrity="sha512-ZxOA8l07uAOW9hOwLustU8G5Pa9WGUplctjW6OSPYT9VZiS6PzEX7tJdZvUQLswakTUkACm5/rykzrDhds2TJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!--script src="js/app.js"></script-->
     </body>
 </html>

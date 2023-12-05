@@ -1,21 +1,121 @@
-//Indicamos que durante el proceso de instalación
+const CACHE ='medifast';
+const CACHE_DINAMICO ='dinamico';
+const CACHE_INMUTABLE ='inmutable';
+
 self.addEventListener('install', evento=>{
-    /*Promesa que crea el proceso de creación del espacio
-    en cache y agrega los archivos necesarios para cargar nuestra
-    aplicación*/
-    const promesa =caches.open('medifast')
+   
+    const promesa =caches.open(CACHE)
     .then(cache=>{
     return cache.addAll([
-    '/',
-    'index.html',
-    'css/styles.css',
-    'ofertas.html',
-    'botiquin.html',
-    'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
-    'assets/img/header-bg.jpg'  
+        //'/',
+        'index.html',
+        'app.js',
+        'manifest.json',
+        'Ofertas.html',
+        'Ofertas2.html',
+        'Botiquin.html',
+        'Botiquin2.html',
+        'assets/img/ima/1.jpeg',
+        'assets/img/ima/2.jpeg',
+        'assets/img/ima/3.jpeg',
+        'assets/img/ima/4.jpeg',
+        'assets/img/ima/61.jpeg',
+        'assets/img/ima/6.jpeg',
+        'assets/img/ima/7.jpeg',
+        'assets/img/ima/8.jpeg',
+        'assets/img/ima/9.jpeg',
+        'assets/img/ima/12.jpeg',
+        'assets/img/ima/14.jpeg',
+        'assets/img/ima/71.jpeg',
+        'assets/img/ima/13.jpeg',
+        'assets/img/ima/17.jpeg',
+        'assets/img/ima/18.jpeg',
+        'assets/img/ima/19.jpeg',
+        'assets/img/ima/20.jpeg',
+        'assets/img/ima/21.jpeg',
+        'assets/img/ima/22.jpeg',
+        'assets/img/ima/23.jpeg',
+        'assets/img/ima/24.jpeg',
+        'assets/img/ima/26.jpeg',
+        'assets/img/ima/25.jpeg',
+        'assets/img/ima/100.jpeg',
+        
+        'java/scripts.js',
+        'offline.html',
+        'assets/img/error404.jpg',
+        'perfil.html',
+        'funciones.js',
+        'main.js',
+        'registrar.html',
+        'java/dexie.min.js'
+        
     ]);
     });
-    //Indicamos que la instalación espere hasta que la promesa se cumpla
-    evento.waitUntil(promesa);
-    });
-   
+    const cacheInmutable =  caches.open(CACHE_INMUTABLE)
+        .then(cache => cache.addAll([
+            'https://use.fontawesome.com/releases/v5.15.3/js/all.js',
+            'https://fonts.googleapis.com/css?family=Montserrat:400,700',
+            'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700',
+            //'/assets/as.png',
+            //'/css/styles.css',
+            //'/css/icons.css',
+            //'/css/bootstrap.min.css',
+            //'/css/londinium-theme.css',
+            //'/css/googleapi.css' 
+            
+
+        ]));
+            
+
+        evento.waitUntil(Promise.all([promesa,cacheInmutable]));
+});
+
+self.addEventListener('fetch', evento => {  
+
+    const respuesta=caches.match(evento.request)
+        .then(res=>{
+
+            if (res) return res;
+                     console.log('No existe', evento.request.url);
+                return fetch(evento.request)
+                .then(resWeb=>{
+                    caches.open(CACHE_DINAMICO)
+                .then(cache=>{
+
+                     cache.put(evento.request,resWeb);
+                        limpiarCache(CACHE_DINAMICO,70);
+                })
+ 
+            return resWeb.clone();
+            });
+        });
+    }) //NAVEGACIÓN OFFLINE
+        .catch(err => {
+            
+            if(evento.request.headers.get('accept').includes('text/html')){
+          
+            return caches.match('/offline.html');
+            }else if(evento.request.headers.get('accept').includes('png')){
+                
+                return caches.match('assets/img/error404.jpg');
+                }
+            });
+        
+            evento.respondWith(respuesta);
+        
+            
+            function limpiarCache(nombreCache, numeroItems){
+                caches.open(nombreCache)
+                    .then(cache=>{
+                        return cache.keys()
+                            .then(keys=>{
+                                if (keys.length>numeroItems){
+                                    cache.delete(keys[0])
+                                    .then(limpiarCache(nombreCache, numeroItems));
+                }
+                });
+                });
+            }
+        
+           
+        
