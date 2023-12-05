@@ -41,8 +41,6 @@ self.addEventListener('install', evento=>{
         'offline.html',
         'assets/img/error404.jpg',
         'perfil.html',
-        //'funciones.js',
-        //'main.js',
         'registrar.html',
         //'java/dexie.min.js'
         
