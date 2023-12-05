@@ -41,10 +41,10 @@ self.addEventListener('install', evento=>{
         'offline.html',
         'assets/img/error404.jpg',
         'perfil.html',
-        'funciones.js',
-        'main.js',
+        //'funciones.js',
+        //'main.js',
         'registrar.html',
-        'java/dexie.min.js'
+        //'java/dexie.min.js'
         
     ]);
     });
@@ -86,11 +86,12 @@ self.addEventListener('fetch', evento => {
             return resWeb.clone();
             });
         });
-    }).catch(err => {
+    })
+    .catch(err => {
             
             if(evento.request.headers.get('accept').includes('text/html')){
           
-            return caches.match('offline.html');
+            return caches.match('/offline.html');
             }else if(evento.request.headers.get('accept').includes('png')){
                 
                 return caches.match('assets/img/error404.jpg');
