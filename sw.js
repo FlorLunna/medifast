@@ -96,7 +96,7 @@ self.addEventListener('fetch', evento => {
                 // Si lo que se pide es un archivo PNG, muestra nuestra imagen de error que está en cache
                 return caches.match('assets/img/error404.jpg');
             }
-        });
+        })
         evento.respondWith(respuesta);
 
     });
