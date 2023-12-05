@@ -49,7 +49,7 @@ self.addEventListener('install', evento=>{
     ]);
     });
     const cacheInmutable =  caches.open(CACHE_INMUTABLE)
-        .then(cache => cache.addAll([
+        .then(cache => cache.addA(
             'https://use.fontawesome.com/releases/v5.15.3/js/all.js',
             //'https://fonts.googleapis.com/css?family=Montserrat:400,700',
             //'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700',
@@ -61,7 +61,7 @@ self.addEventListener('install', evento=>{
             //'/css/googleapi.css' 
             
 
-        ]));
+        ));
             
 
         evento.waitUntil(Promise.all([promesa,cacheInmutable]));
