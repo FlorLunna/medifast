@@ -10,7 +10,6 @@ self.addEventListener('install', evento=>{
         //'/',
         'index.html',
         'app.js',
-        'manifest.json',
         'Botiquin.html',
         'assets/img/ima/1.jpeg',
         'assets/img/ima/2.jpeg',
@@ -36,7 +35,7 @@ self.addEventListener('install', evento=>{
         'assets/img/ima/26.jpeg',
         'assets/img/ima/25.jpeg',
         'assets/img/ima/100.jpeg',
-        
+        'manifest.json',
         'java/scripts.js',
         'offline.html',
         'assets/img/error404.jpg',
