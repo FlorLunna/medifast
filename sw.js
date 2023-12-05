@@ -97,9 +97,10 @@ self.addEventListener('fetch', evento => {
                 return caches.match('assets/img/error404.jpg');
             }
         });
-    });
         evento.respondWith(respuesta);
 
+    });
+       
 
     
   
