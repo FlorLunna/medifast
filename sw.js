@@ -101,17 +101,3 @@ self.addEventListener('fetch', evento => {
     
         
     
-    
-        function limpiarCache(nombreCache, numeroItems){
-            //abrimos el cache
-            caches.open(nombreCache)
-                .then(cache=>{
-                    return cache.keys()
-                        .then(keys=>{
-                            if (keys.length>numeroItems){
-                                cache.delete(keys[0])
-                                .then(limpiarCache(nombreCache, numeroItems));
-            }
-            });
-            });
-        }
