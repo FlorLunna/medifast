@@ -67,38 +67,55 @@ self.addEventListener('install', evento=>{
         evento.waitUntil(Promise.all([promesa,cacheInmutable]));
 });
 
-self.addEventListener('fetch', evento => {  
+self.addEventListener('fetch', evento => {
+    const respuesta = caches.match(evento.request)
+        .then(res => {
+            if (res) {
+                return res;
+            }
+            console.log('No existe', evento.request.url);
 
-    const respuesta=caches.match(evento.request)
-        .then(res=>{
-
-            if (res) return res;
-                     console.log('No existe', evento.request.url);
-                return fetch(evento.request)
-                .then(resWeb=>{
+            return fetch(evento.request)
+                .then(resWeb => {
                     caches.open(CACHE_DINAMICO)
-                .then(cache=>{
+                        .then(cache => {
+                            cache.put(evento.request, resWeb);
+                            limpiarCache(CACHE_DINAMICO, 70);
+                        });
 
-                     cache.put(evento.request,resWeb);
-                        limpiarCache(CACHE_DINAMICO,70);
-                })
- 
-            return resWeb.clone();
-            });
+                    // Mover este bloque dentro del 'then' correspondiente
+                    return resWeb.clone();
+                });
         })
-    }).catch(err => {
-        //si ocurre un error, en nuestro caso no hay conexión
-        if(evento.request.headers.get('accept').includes('text/html')){
-        //si lo que se pide es un archivo html muestra nuestra página offline que esta en cache
-        return caches.match('/offline.html');
-        }else if(evento.request.headers.get('accept').includes('png')){
-            //si lo que se pide es un archivo png muestra nuestra una la no-img.png que esta en cache
-            return caches.match('assets/img/error404.jpg');
+        .catch(err => {
+            // Si ocurre un error, en nuestro caso no hay conexión
+            if (evento.request.headers.get('accept').includes('text/html')) {
+                // Si lo que se pide es un archivo HTML, muestra nuestra página offline que está en cache
+                return caches.match('/offline.html');
+            } else if (evento.request.headers.get('accept').includes('png')) {
+                // Si lo que se pide es un archivo PNG, muestra nuestra imagen de error que está en cache
+                return caches.match('assets/img/error404.jpg');
             }
         });
+
+    evento.respondWith(respuesta);
+});
+
     
-    
-   
+        evento.respondWith(respuesta);
+        function limpiarCache(nombreCache, numeroItems){
+            //abrimos el cache
+            caches.open(nombreCache)
+                .then(cache=>{
+                    return cache.keys()
+                        .then(keys=>{
+                            if (keys.length>numeroItems){
+                                cache.delete(keys[0])
+                                .then(limpiarCache(nombreCache, numeroItems));
+            }
+            });
+            });
+        }
     
         
     
