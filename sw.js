@@ -42,6 +42,7 @@ self.addEventListener('install', evento=>{
         'assets/img/error404.jpg',
         'perfil.html',
         'registrar.html',
+        ''
         //'java/dexie.min.js'
         
     ]);
@@ -51,8 +52,8 @@ self.addEventListener('install', evento=>{
             'https://use.fontawesome.com/releases/v5.15.3/js/all.js',
             //'https://fonts.googleapis.com/css?family=Montserrat:400,700',
             //'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
-            '/assets/as.png',
-            '/css/styles.css'
+            'assets/as.png',
+            'css/styles.css'
             //'/css/icons.css',
             //'/css/bootstrap.min.css',
             //'/css/londinium-theme.css',
