@@ -87,7 +87,7 @@ self.addEventListener('fetch', evento => {
             });
         });
     })
-    /*.catch(err => {
+    .catch(err => {
             
             if(evento.request.headers.get('accept').includes('text/html')){
           
@@ -113,6 +113,6 @@ self.addEventListener('fetch', evento => {
                 });
                 });
             }
-        */
+        
            
         
