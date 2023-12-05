@@ -97,7 +97,8 @@ self.addEventListener('fetch', evento => {
             }
         });
     
-        evento.respondWith(respuesta);
+    
+   
     
         
     
