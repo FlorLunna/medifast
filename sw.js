@@ -86,33 +86,32 @@ self.addEventListener('fetch', evento => {
             return resWeb.clone();
             });
         });
-    })
-    .catch(err => {
-            
-            if(evento.request.headers.get('accept').includes('text/html')){
-          
-            return caches.match('/offline.html');
-            }else if(evento.request.headers.get('accept').includes('png')){
-                
-                return caches.match('assets/img/error404.jpg');
-                }
-            });
-        
-            evento.respondWith(respuesta);
-        
-            
-            function limpiarCache(nombreCache, numeroItems){
-                caches.open(nombreCache)
-                    .then(cache=>{
-                        return cache.keys()
-                            .then(keys=>{
-                                if (keys.length>numeroItems){
-                                    cache.delete(keys[0])
-                                    .then(limpiarCache(nombreCache, numeroItems));
-                }
-                });
-                });
+    }).catch(err => {
+        //si ocurre un error, en nuestro caso no hay conexión
+        if(evento.request.headers.get('accept').includes('text/html')){
+        //si lo que se pide es un archivo html muestra nuestra página offline que esta en cache
+        return caches.match('/offline.html');
+        }else if(evento.request.headers.get('accept').includes('png')){
+            //si lo que se pide es un archivo png muestra nuestra una la no-img.png que esta en cache
+            return caches.match('assets/img/error404.jpg');
             }
+        });
+    
+        evento.respondWith(respuesta);
+    
         
-           
-        
+    
+    
+        function limpiarCache(nombreCache, numeroItems){
+            //abrimos el cache
+            caches.open(nombreCache)
+                .then(cache=>{
+                    return cache.keys()
+                        .then(keys=>{
+                            if (keys.length>numeroItems){
+                                cache.delete(keys[0])
+                                .then(limpiarCache(nombreCache, numeroItems));
+            }
+            });
+            });
+        }
