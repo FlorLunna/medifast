@@ -47,19 +47,19 @@ self.addEventListener('install', evento=>{
     ]);
     });
     const cacheInmutable =  caches.open(CACHE_INMUTABLE)
-        .then(cache => cache.add(
+        .then(cache => cache.addAll([
             'https://use.fontawesome.com/releases/v5.15.3/js/all.js',
             //'https://fonts.googleapis.com/css?family=Montserrat:400,700',
-            //'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700',
-            //'/assets/as.png',
-            //'/css/styles.css',
+            //'https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
+            '/assets/as.png',
+            '/css/styles.css'
             //'/css/icons.css',
             //'/css/bootstrap.min.css',
             //'/css/londinium-theme.css',
             //'/css/googleapi.css' 
             
 
-        ));
+        ]));
             
 
         evento.waitUntil(Promise.all([promesa,cacheInmutable]));
